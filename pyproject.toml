@@ -1,0 +1,23 @@
+[project]
+name = "nginx-config-auditor"
+version = "0.1.0"
+description = "Static security auditor for nginx configuration files: version disclosure, directory listing, deprecated TLS, weak ciphers, missing security headers."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Kaan Turan" }]
+dependencies = []
+
+[project.scripts]
+nginx-config-auditor = "nginx_config_auditor:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["nginx_config_auditor"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
